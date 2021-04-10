@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7657e0c0-dc0d-49d7-a0ee-e10c473c14c6" name="Default Changelist" comment="initial commit">
+      <change afterPath="$PROJECT_DIR$/Chapter_javascript/Oefeningen deel 3 controlestructuren/Deel 3 controlestructuren.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Chapter_javascript/Oefeningen deel 3 controlestructuren/javascript_deel_drie.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter_javascript/Oef 1.js" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter_javascript/Oef 1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter_javascript/oef 1 welkom.html" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter_javascript/oef 1 welkom.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter_javascript/oef 4.html" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter_javascript/oef 4.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1oVuAqXJxcic1wS8jv3Lav9tPeY" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Wpl 2/PXL2021WebshopFrontEndTeam13" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7657e0c0-dc0d-49d7-a0ee-e10c473c14c6" name="Default Changelist" comment="" />
+      <created>1613383938225</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1613383938225</updated>
+      <workItem from="1613383939312" duration="940000" />
+      <workItem from="1613987339815" duration="4779000" />
+      <workItem from="1614170529980" duration="4825000" />
+      <workItem from="1614265295731" duration="481000" />
+      <workItem from="1614320508343" duration="668000" />
+      <workItem from="1614333441178" duration="37000" />
+      <workItem from="1615801132727" duration="5222000" />
+      <workItem from="1615984477063" duration="5031000" />
+      <workItem from="1616018730087" duration="47000" />
+      <workItem from="1616063448556" duration="79000" />
+    </task>
+    <task id="LOCAL-00001" summary="initial commit">
+      <created>1613384032250</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1613384032250</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="initial commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="740" y="280" key="FileChooserDialogImpl" timestamp="1616063524501">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="740" y="280" key="FileChooserDialogImpl/-246.1096.1920.1050/-1920.16.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1616063524501" />
+    <state x="740" y="280" key="FileChooserDialogImpl/0.0.1920.1050@0.0.1920.1050" timestamp="1616018775038" />
+    <state x="552" y="258" key="Vcs.Push.Dialog.v2" timestamp="1613384076131">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="552" y="258" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1613384076131" />
+  </component>
+</project>
