@@ -1,5 +1,5 @@
 window.onload = function () {
-    oefening3();
+    oefening2();
 }
 
 function oefening2()
@@ -37,15 +37,15 @@ function oefening3() {
 function oefening4() {
  let boek1= {
      Titel: 'The theory of everything',
-     Auteur: 'Sephen Hawking',
+     Auteur: 'Stephen Hawking',
      Gelezen: 'ja'
     }
     let boek2 = {
      Titel: '12 rules for life',
         Auteur: 'Jordan Peterson',
     Gelezen: 'nee'}
-    let eersteboek = document.createTextNode(boek1.Titel + boek1.Auteur);
- let tweedeboek = document.createTextNode(`${boek2.Titel} entekst` );
+    let eersteboek = document.createTextNode(boek1.Titel + ' van ' + boek1.Auteur);
+ let tweedeboek = document.createTextNode(`${boek2.Titel} van ${boek2.Auteur}` );
  let eerste = document.createElement('li');
     eerste.appendChild(eersteboek);
     let tweede = document.createElement('li');
