@@ -8,7 +8,7 @@
 <script>
 
 import Header from "@/components/Header";
-import Testitem from "@/components/Testitem";
+import Testitem from "@/components/AlbumList";
 import Item from "@/components/Item";
 export default {
 name: "Albumlist",

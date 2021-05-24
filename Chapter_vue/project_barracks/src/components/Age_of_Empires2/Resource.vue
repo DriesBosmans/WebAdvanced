@@ -1,7 +1,10 @@
 <template>
 <div>
 <img :src="require(`../../assets/${resource.img}`)" :alt="resource.type">
-  <span>{{resource.amount}}</span>
+  <span>{{resource.Food}}</span>
+  <span>{{resource.Wood}}</span>
+  <span>{{resource.Gold}}</span>
+  <span>{{resource.Stone}}</span>
 </div>
 </template>
 

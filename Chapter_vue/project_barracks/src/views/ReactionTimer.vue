@@ -1,5 +1,5 @@
 <template>
-<h1>Reaction timer component</h1>
+  <h1><a href="https://www.youtube.com/watch?v=bc6czIBLKTg" target="_blank">Reaction timer component</a></h1>
   <button @click="start" :disabled="isPlaying">Play</button>
 <block v-if="isPlaying" :delay="delay" @end="endGame"></block>
   <Results v-if="showResults" :score="score"></Results>
@@ -37,8 +37,11 @@ methods: {
 </script>
 
 <style scoped>
-h1{font-style: italic;
-font-family: "Fira Code Retina"}
+a{text-decoration: none;}
+h1{
+
+font-family: Stencil;
+margin: 30px;}
 
 button{
   background: #0faf87;

@@ -5,7 +5,7 @@
         <ul >
           <li><router-link  to="/TaskTracker">Task tracker</router-link></li>
             <li><router-link to="/Albumlist">Albumlist</router-link></li>
-          <li><router-link to="/Buildings">Buildings</router-link></li>
+          <li><router-link to="/Buildings">Age of Empires II</router-link></li>
           <li><router-link to="/ReactionTimer">Reaction timer</router-link></li>
         </ul>
     </nav>
@@ -33,7 +33,7 @@ div{
 }
 h1{
 font-family: "Freestyle Script";
-
+margin-bottom: 0;
   padding: 15px;
   color: white;
 }

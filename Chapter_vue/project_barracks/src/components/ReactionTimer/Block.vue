@@ -25,12 +25,8 @@ props: [
       console.log(this.delay)
     }, this.delay)
   },
-  updated(){
-console.log('component updated')
-  },
-  unmounted() {
-  console.log('unmounted')
-  },
+
+
   methods:{
   startTimer(){
 this.timer = setInterval(() => {

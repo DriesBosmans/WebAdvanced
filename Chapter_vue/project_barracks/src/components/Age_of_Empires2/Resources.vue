@@ -2,7 +2,9 @@
   <div class="outerresources">
   <div class="innerresources" v-for="resource in resources" :key="resource.key">
     <Resource :resource="resource" ></Resource>
+
   </div>
+    <h1>wololoo</h1>
   </div>
 </template>
 
@@ -27,10 +29,13 @@ name: "Resources",
 .innerresources{padding: 0 20px;}
 .outerresources{display: flex;
   width: 100%;
-
+align-items: center;
 
   margin: 0;
 flex-direction: row;
 background: #c8af88;
 border: #475056 solid 4px;}
+h1{display: inline-block;
+position: relative;
+left: 15%}
 </style>

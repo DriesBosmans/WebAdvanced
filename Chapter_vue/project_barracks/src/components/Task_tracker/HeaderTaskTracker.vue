@@ -1,6 +1,6 @@
 <template>
   <header>
-    <h1>{{ title }}</h1>
+    <h1><a href="https://www.youtube.com/watch?v=qZXt1Aom3Cs&t=1938s" target="_blank">{{ title }}</a></h1>
     <Button @btn-click="$emit('toggle-add-task')"
             :text="showAddTask ? 'Close' : 'Add Task'"
             :color="showAddTask ? 'red' : 'green'"/>
@@ -28,5 +28,7 @@ header{
   justify-content: space-between;
   align-items: center;
 
+}
+a{text-decoration: none;
 }
 </style>

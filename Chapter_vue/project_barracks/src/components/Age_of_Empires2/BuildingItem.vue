@@ -1,21 +1,23 @@
 <template>
-  <div  id="outer" >
-<div class="buildings "   >
-  <h2 >{{ building.title }}</h2>
-  <img v-show="building.show" :src="require(`../../assets/${building.img}`)" >
- <img id={{building.id}}  :src="require(`../../assets/${building.villager}`)" class="invisible" >
-  <label>recources needed: {{ building.price.wood }} wood, {{ building.price.stone }} stone</label>
-  <input @click="bouwgebouw(building.price)" id=""  type="button"
-         :value="building.show ? 'delete it' : 'build it'"/>
-  <unit></unit>
-  </div>
+  <div id="outer">
+    <div class="buildings ">
+      <h2>{{ building.title }}</h2>
+      <img id="gebouw" v-if="gebouwd" :src="require(`../../assets/${building.img}`)">
+      <img :src="require(`../../assets/${building.villager}`)" v-if="bouwen">
+      <img :src="require('../../assets/ram.gif')" v-if="afbreken">
+      <label> {{ building.price.wood }} wood, {{ building.price.stone }} stone</label>
+      <input id="knop" @click="checkstatus" type="button" :disabled="afbreken||bouwen"
+             :value="building.show ? 'delete it' : 'build it'"/>
+
+      <Units></Units>
+    </div>
   </div>
 </template>
 
 
 
 <script>
-import timer from "@/components/Age_of_Empires2/timer";
+
 export default {
 name: "BuildingItem",
   props: {
@@ -25,18 +27,48 @@ name: "BuildingItem",
 
 
   },
-  methods: {
-  bouwgebouw(){
-    this.building.show = !this.building.show;
-this.$emit(this.building.price)
+  data(){
+  return{
 
+    bouwen: false,
+    gebouwd: false,
+    afbreken: false,
+  }
+  },
+
+
+  methods: {
+  checkstatus()
+  {
+    if(this.gebouwd === false)
+    {this.bouwgebouw()}
+    else{
+      this.gebouwafbreken()
     }
 
+  },
+  bouwgebouw()
+    {
+      this.bouwen= true //villager komt tevoorschijn
 
+      setTimeout(() =>{
+      this.bouwen = false
+      this.gebouwd = true
+        this.building.show = true
+        this.$emit('bob',[this.building.price.wood, this.building.price.stone])
+    },2000)
+      },
+gebouwafbreken()
+{
+  this.afbreken = true
+  this.gebouwd = false
+  setTimeout(()=>{
+    this.afbreken = false
 
-
-
+    this.building.show = false
+  } , 2000)
 }
+    }
 
   }
 
@@ -46,12 +78,17 @@ this.$emit(this.building.price)
 #outer{
 
 }
+h2{
+  font-family: Castellar;
+
+}
 .active{
-color: red;}
+
+color: #cbe0bc}
 img{width: 400px;}
 .buildings{
   flex-wrap: wrap;
-  height:600px;
+  height:80vh;
 width: 500px;
   display: flex;
   flex-direction: column;
@@ -59,6 +96,15 @@ width: 500px;
   align-items: center;
 
 }
-.invisible{display: none;}
-.isselected{}
+
+
+#knop{
+  border: 2px solid #2c3e50;
+  border-radius: 4px;
+  padding: 10px;
+  background-color: #c8af88;
+}
+#knop[disabled]{
+opacity: 0.2;
+}
 </style>
