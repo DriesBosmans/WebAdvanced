@@ -1,10 +1,13 @@
 <template>
 <div class="container">
-  <Header @toggle-add-task="toggleAddTask" title="Task tracker"></Header>
+  <Header @toggle-add-task="toggleAddTask"
+          title="Task tracker"
+  :showAddTask="showAddTask"></Header>
   <div v-show="showAddTask">
     <AddTask @add-task="addTask"></AddTask>
   </div>
-  <Tasks @toggle-reminder="toggleReminder" @delete-task="deleteTask"  :tasks="tasks"></Tasks>
+  <Tasks @toggle-reminder="toggleReminder"
+         @delete-task="deleteTask"  :tasks="tasks"></Tasks>
 
 </div>
   <!-- npm run serve -->
