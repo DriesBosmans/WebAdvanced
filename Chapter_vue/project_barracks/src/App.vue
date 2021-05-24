@@ -25,13 +25,15 @@ data(){ return{
 
 <style>
 #app {
+
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  background: #eeeeee;
 }
-
+a{text-decoration: none;}
 #nav {
   padding: 30px;
 }

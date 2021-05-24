@@ -29,7 +29,13 @@ const routes = [
     path: '/ReactionTimer',
     name: 'ReactionTimer',
     component: () => import('../views/ReactionTimer')
+  },
+  {
+    path: '/Signupformapp',
+    name: 'Signupformapp',
+    component: () => import('../views/signupformapp')
   }
+
 ]
 
 const router = createRouter({

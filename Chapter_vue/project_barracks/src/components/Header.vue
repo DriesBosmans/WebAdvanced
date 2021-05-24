@@ -7,6 +7,7 @@
             <li><router-link to="/Albumlist">Albumlist</router-link></li>
           <li><router-link to="/Buildings">Age of Empires II</router-link></li>
           <li><router-link to="/ReactionTimer">Reaction timer</router-link></li>
+          <li><router-link to="/Signupformapp">Signupform</router-link></li>
         </ul>
     </nav>
   </div>

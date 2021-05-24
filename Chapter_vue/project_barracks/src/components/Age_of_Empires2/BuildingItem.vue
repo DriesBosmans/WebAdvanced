@@ -50,12 +50,12 @@ name: "BuildingItem",
   bouwgebouw()
     {
       this.bouwen= true //villager komt tevoorschijn
-
+      this.$emit('bob',[this.building.price.wood, this.building.price.stone])
       setTimeout(() =>{
       this.bouwen = false
       this.gebouwd = true
         this.building.show = true
-        this.$emit('bob',[this.building.price.wood, this.building.price.stone])
+
     },2000)
       },
 gebouwafbreken()
