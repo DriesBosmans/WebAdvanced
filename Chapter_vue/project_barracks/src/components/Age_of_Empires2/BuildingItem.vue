@@ -1,5 +1,5 @@
 <template>
-  <div id="outer">
+
     <div class="buildings ">
       <h2>{{ building.title }}</h2>
       <img id="gebouw" v-if="gebouwd" :src="require(`../../assets/${building.img}`)">
@@ -9,9 +9,9 @@
       <input id="knop" @click="checkstatus" type="button" :disabled="afbreken||bouwen"
              :value="building.show ? 'delete it' : 'build it'"/>
 
-      <Units></Units>
+
     </div>
-  </div>
+
 </template>
 
 
@@ -75,8 +75,9 @@ gebouwafbreken()
 </Script>
 
 <style scoped>
-#outer{
+#outerbuilding{
 
+  width: 25%;
 }
 h2{
   font-family: Castellar;
@@ -87,20 +88,24 @@ h2{
 color: #cbe0bc}
 img{width: 400px;}
 .buildings{
+
+
   flex-wrap: wrap;
-  height:80vh;
-width: 500px;
+
+  width: 450px;
+
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
+  height: 500px;
 }
 
 
 #knop{
   border: 2px solid #2c3e50;
-  border-radius: 4px;
+  border-radius: 5px;
   padding: 10px;
   background-color: #c8af88;
 }

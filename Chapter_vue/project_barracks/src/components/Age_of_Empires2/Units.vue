@@ -5,8 +5,10 @@
 </template>
 
 <script>
+import Villager from "@/components/Age_of_Empires2/Villager";
 export default {
-name: "Units"
+name: "Units",
+  components: {Villager}
 }
 </script>
 

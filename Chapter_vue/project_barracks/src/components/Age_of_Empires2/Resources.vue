@@ -4,7 +4,7 @@
     <Resource :resource="resource" ></Resource>
 
   </div>
-    <h1>wololoo</h1>
+    <h1>wololo</h1>
   </div>
 </template>
 
