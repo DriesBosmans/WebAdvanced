@@ -1,5 +1,4 @@
 <template>
-
     <div class="buildings ">
       <h2>{{ building.title }}</h2>
       <img id="gebouw" v-if="gebouwd" :src="require(`../../assets/${building.img}`)" alt="">
@@ -8,28 +7,22 @@
       <label> {{ building.price.wood }} wood, {{ building.price.stone }} stone</label>
       <input  id="knop" @click="checkstatus" type="button" :disabled="afbreken||bouwen"
              :value="building.show ? 'delete it' : 'build it'"/>
-
-
     </div>
-
 </template>
 
 
 
 <script>
-
 export default {
 name: "BuildingItem",
   props: {
     building: Object,
     showunits: String,
     units: Object,
-
-
   },
+
   data(){
   return{
-
     bouwen: false,
     gebouwd: false,
     afbreken: false,
@@ -45,7 +38,6 @@ name: "BuildingItem",
     else{
       this.gebouwafbreken()
     }
-
   },
   bouwgebouw()
     {
@@ -82,21 +74,17 @@ gebouwafbreken()
 h2{
   font-family: Castellar;
   font-weight: bold;
-
 }
 .active{
+color: #cbe0bc
+}
 
-color: #cbe0bc}
 img{width: 400px;
-border-radius: 30px;}
+border-radius: 30px;
+}
 .buildings{
-
-
   flex-wrap: wrap;
-
   width: 450px;
-
-
   display: flex;
   flex-direction: column;
   justify-content: center;

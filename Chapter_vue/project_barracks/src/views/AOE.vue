@@ -1,6 +1,6 @@
 <template>
   <div class="outer">
-    <Resources :resources="resources"></Resources>
+    <Resources :resources="resources" :pop="pop"></Resources>
     <div class="buildingblock">
       <ul>
         <li v-for="(building, i) in buildings" :key="building.id">
@@ -11,27 +11,27 @@
 
             <Villager
                 v-if="building.title === 'Town center' && i === activeItem && buildings[0].show === true"
-                @koopUnit="DoeTransactieUnit($event, resources), VoegUnitToe('Villager', units)">
+                @koopUnit="DoeTransactieUnit($event, resources), VoegUnitToe('Villager')" :popcapped="popcapped">
             </Villager>
             <ManAtArms
                 v-if="building.title ==='Barracks' && i === activeItem && buildings[1].show === true"
-                       @koopUnit="DoeTransactieUnit($event, resources)">
+                       @koopUnit="DoeTransactieUnit($event, resources), VoegUnitToe('Manatarms')">
             </ManAtArms>
             <Spearman
                 v-if="building.title ==='Barracks' && i === activeItem && buildings[1].show === true"
-                      @koopUnit="DoeTransactieUnit($event, resources)">
+                      @koopUnit="DoeTransactieUnit($event, resources), VoegUnitToe('Spearman')">
             </Spearman>
             <trebuchet
                 v-if="building.title ==='Castle' && i === activeItem && buildings[3].show === true"
-                       @koopUnit="DoeTransactieUnit($event, resources)">
+                       @koopUnit="DoeTransactieUnit($event, resources), VoegUnitToe('Trebuchet')">
             </trebuchet>
             <Archer
                 v-if="building.title ==='Archery range' && i === activeItem && buildings[2].show === true"
-            @koopUnit="DoeTransactieUnit($event, resources)">
+            @koopUnit="DoeTransactieUnit($event, resources), VoegUnitToe('Archer')">
             </Archer>
             <Longbowman
                 v-if="building.title ==='Castle' && i === activeItem && buildings[3].show === true"
-                        @koopUnit="DoeTransactieUnit($event, resources)">
+                        @koopUnit="DoeTransactieUnit($event, resources), VoegUnitToe('Longbowman')">
 
             </Longbowman>
           </div>
@@ -41,7 +41,7 @@
       </ul>
     </div>
 
-    <units :units="units" >
+    <units :units="units" :unit-array="unitArray" @deleteUnit="DeleteUnit($event)" >
 
     </units>
   </div>
@@ -77,7 +77,7 @@ export default {
           isSelected: false,
           id: 1,
           show: false,
-          unitForSale: Villager,
+
         },
         {
           title: 'Barracks',
@@ -116,9 +116,14 @@ export default {
       units: [
         {unittype: 'villager', food: 50, wood: 0, gold: 0, img: 'villager.webp', amount: 0},
         {unittype: 'man-at-arms', food: 60, wood: 0, gold: 20, img: 'manatarms.webp', amount: 0},
-        {unittype: 'archer', food: 0, wood: 25, gold: 45, img: 'archer.webp', amount: 0}
+        {unittype: 'archer', food: 0, wood: 25, gold: 45, img: 'archer.webp', amount: 0},
+        {unittype: 'spearman', img: 'spearman.webp', amount: 0},
+        {unittype: 'longbowman', img: 'longbowman.jpg', amount: 0},
+        {unittype: 'trebuchet', img: 'trebuchet.webp', amount: 0}
       ],
-      unitArray: ['villager.webp','villager.webp']
+      unitArray: [],
+      pop: [0,30],
+      popcapped: false,
 
 
 
@@ -130,16 +135,14 @@ export default {
     Longbowman,
     Archer,
     Spearman,
-
     Resources,
     BuildingItem,
     Villager,
     Units,
     ManAtArms,
     Trebuchet
-
-
   },
+
   methods: {
     toggleactive(i) {
       this.activeItem = i;
@@ -147,17 +150,14 @@ export default {
     },
 
     DoeTransactie(price, resources) {
-
-
       resources[0].Wood -= price[0]
       resources[3].Stone -= price[1]
-      console.log(resources)
+
       return resources;
 
 
     },
     DoeTransactieUnit(price, resources) {
-
       resources[1].Food -= price[0]
       resources[0].Wood -= price[1]
       resources[2].Gold -= price[2]
@@ -165,17 +165,55 @@ export default {
       return resources;
     },
 
-    VoegUnitToe(Unit, units, unitArray)
+    VoegUnitToe(Unit, units)
     {
-      if(Unit === 'Villager')
-      units[0].amount++
 
-      unitArray.push('villager.webp')
-      if(Unit === 'ManAtArms')
-      units[1].amount++
-      console.log(units[0].amount)
-      console.log(unitArray)
-    }
+      if(Unit === 'Villager') {
+        this.units[0].amount++
+        this.unitArray.push(this.units[0].img)
+
+      }
+
+      if(Unit === 'Manatarms') {
+        this.units[1].amount++
+        this.unitArray.push(this.units[1].img)
+      }
+      if(Unit ==='Archer'){
+        this.units[2].amount++
+        this.unitArray.push(this.units[2].img)
+      }
+      if(Unit==='Spearman'){
+        this.units[3].amount++
+        this.unitArray.push(this.units[3].img)
+      }
+      if(Unit ==='Longbowman'){
+        this.units[4].amount++
+        this.unitArray.push(this.units[4].img)
+      }
+      if(Unit === 'Trebuchet'){
+        this.units[5].amount++
+        this.unitArray.push(this.units[5].img)
+      }
+      this.pop[0]++
+      if(this.pop[0] === this.pop[1])
+      {
+        this.popcapped = true
+      }
+
+
+    },
+    DeleteUnit(unit){
+      let index = this.unitArray.indexOf(unit)
+      if (index > -1)
+      {
+        this.unitArray.splice(index, 1)
+        this.pop[0]--
+      }
+
+
+
+}
+
   },
 
 

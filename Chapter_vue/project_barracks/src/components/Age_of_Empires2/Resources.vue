@@ -4,7 +4,7 @@
     <Resource :resource="resource" ></Resource>
 
   </div>
-    <h1>wololo</h1>
+    <h2>pop: {{pop[0]}}/{{pop[1]}}</h2>
   </div>
 </template>
 
@@ -19,6 +19,7 @@ name: "Resources",
   },
   props: {
     resources: Object,
+    pop: Array,
   },
   components: {Resource}
 }
