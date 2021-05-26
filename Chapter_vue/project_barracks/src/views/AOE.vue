@@ -199,9 +199,17 @@ export default {
       {
         this.popcapped = true
       }
+      let villagers = this.unitArray.filter(x => x === 'villager.webp')
+      villagers.forEach(()=> setInterval(() => {
+        this.resources[0].Wood += 3
+        this.resources[1].Food += 2
+        this.resources[2].Gold += 1
+        this.resources[3].Stone += 0.5
+      }, 2000))
 
 
     },
+
     DeleteUnit(unit){
       let index = this.unitArray.indexOf(unit)
       if (index > -1)
@@ -212,7 +220,11 @@ export default {
 
 
 
-}
+},
+    StartProduction()
+    {
+
+    }
 
   },
 
