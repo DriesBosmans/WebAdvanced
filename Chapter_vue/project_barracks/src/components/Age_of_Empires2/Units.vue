@@ -6,9 +6,14 @@
 
 <script>
 import Villager from "@/components/Age_of_Empires2/Villager";
+import OwnedUnit from "@/components/Age_of_Empires2/OwnedUnit";
 export default {
 name: "Units",
-  components: {Villager}
+  components: {OwnedUnit, },
+  props: {
+  units: Object,
+
+  }
 }
 </script>
 
@@ -16,6 +21,7 @@ name: "Units",
 div{
   display: inline-block;
   width: 434px;
+
   height: 160px;
 
   background-image: url("../../assets/balk.png");

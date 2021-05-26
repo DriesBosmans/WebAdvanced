@@ -11,12 +11,12 @@
 
 <script>
 export default {
-  name: "ManAtArms",
+  name: "Longbowman",
   data(){
     return{
-      title: 'Man-At-Arms',
-      cost: {F: 60, W: 0, G: 20},
-      img: 'manatarms.webp'
+      title: 'Longbowman',
+      cost: {F: 0, W: 35, G: 40},
+      img: 'longbowman.jpg'
     }
   },
   methods: {

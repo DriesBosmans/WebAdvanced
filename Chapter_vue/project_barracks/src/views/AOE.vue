@@ -10,14 +10,30 @@
           <div class="unitstekoop">
 
             <Villager
-                v-if="building.title === 'Town center' && (i === activeItem) && buildings[0].show === true"
+                v-if="building.title === 'Town center' && i === activeItem && buildings[0].show === true"
                 @koopUnit="DoeTransactieUnit($event, resources), VoegUnitToe('Villager', units)">
             </Villager>
-
-            <ManAtArms v-if="building.title ==='Barracks' && i === activeItem && buildings[1].show === true"
+            <ManAtArms
+                v-if="building.title ==='Barracks' && i === activeItem && buildings[1].show === true"
                        @koopUnit="DoeTransactieUnit($event, resources)">
             </ManAtArms>
+            <Spearman
+                v-if="building.title ==='Barracks' && i === activeItem && buildings[1].show === true"
+                      @koopUnit="DoeTransactieUnit($event, resources)">
+            </Spearman>
+            <trebuchet
+                v-if="building.title ==='Castle' && i === activeItem && buildings[3].show === true"
+                       @koopUnit="DoeTransactieUnit($event, resources)">
+            </trebuchet>
+            <Archer
+                v-if="building.title ==='Archery range' && i === activeItem && buildings[2].show === true"
+            @koopUnit="DoeTransactieUnit($event, resources)">
+            </Archer>
+            <Longbowman
+                v-if="building.title ==='Castle' && i === activeItem && buildings[3].show === true"
+                        @koopUnit="DoeTransactieUnit($event, resources)">
 
+            </Longbowman>
           </div>
 
 
@@ -25,7 +41,7 @@
       </ul>
     </div>
 
-    <units >
+    <units :units="units" >
 
     </units>
   </div>
@@ -38,8 +54,12 @@ import ManAtArms from "@/components/Age_of_Empires2/ManAtArms";
 import BuildingItem from "../components/Age_of_Empires2/BuildingItem";
 import Resources from "@/components/Age_of_Empires2/Resources";
 import Villager from "@/components/Age_of_Empires2/Villager";
-
+import Spearman from "@/components/Age_of_Empires2/Spearman";
 import Units from "@/components/Age_of_Empires2/Units";
+import Trebuchet from "@/components/Age_of_Empires2/Trebuchet";
+import Archer from "@/components/Age_of_Empires2/Archer";
+import Longbowman from "@/components/Age_of_Empires2/Longbowman";
+
 
 export default {
   name: 'Buildings',
@@ -98,7 +118,7 @@ export default {
         {unittype: 'man-at-arms', food: 60, wood: 0, gold: 20, img: 'manatarms.webp', amount: 0},
         {unittype: 'archer', food: 0, wood: 25, gold: 45, img: 'archer.webp', amount: 0}
       ],
-      // unitArray: [{img1: 'villager.webp'}]
+      unitArray: ['villager.webp','villager.webp']
 
 
 
@@ -107,12 +127,17 @@ export default {
 
 
   components: {
+    Longbowman,
+    Archer,
+    Spearman,
 
     Resources,
-    BuildingItem: BuildingItem,
+    BuildingItem,
     Villager,
     Units,
-    ManAtArms
+    ManAtArms,
+    Trebuchet
+
 
   },
   methods: {
@@ -120,6 +145,7 @@ export default {
       this.activeItem = i;
       this.showunits = i;
     },
+
     DoeTransactie(price, resources) {
 
 
@@ -139,15 +165,16 @@ export default {
       return resources;
     },
 
-    VoegUnitToe(Unit, units)
+    VoegUnitToe(Unit, units, unitArray)
     {
       if(Unit === 'Villager')
       units[0].amount++
 
-      // unitArray.push(units[0].img)
+      unitArray.push('villager.webp')
       if(Unit === 'ManAtArms')
       units[1].amount++
       console.log(units[0].amount)
+      console.log(unitArray)
     }
   },
 
@@ -157,7 +184,10 @@ export default {
 </script>
 
 <style>
+*{
+  box-sizing: border-box;
 
+}
 ul {
   display: flex;
 
@@ -176,7 +206,7 @@ ul {
 
 div {
   font-family: Castellar, sans serif;
-  font-palette: dark;
+
   font-weight: bold;
 }
 
@@ -203,9 +233,12 @@ li {
 
 
 .unitstekoop {
-  display: inline-block;
+  display: flex!important;
+  flex-direction: row;
+  justify-content: center;
   width: 100%;
   height: 120px;
 
 }
+
 </style>

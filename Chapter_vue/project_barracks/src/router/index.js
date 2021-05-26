@@ -23,7 +23,7 @@ const routes = [
   {
     path: '/Buildings',
     name: 'Buildings',
-    component: () => import('../views/Buildings')
+    component: () => import('../views/AOE')
   },
   {
     path: '/ReactionTimer',

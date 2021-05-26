@@ -37,7 +37,7 @@ display: flex;
 
 margin: 10px;
 height: 50px;
-  width: 80px;
+  width: 100px;
 }
 
 div p{
