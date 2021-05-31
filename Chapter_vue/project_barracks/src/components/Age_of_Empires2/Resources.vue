@@ -36,6 +36,7 @@ align-items: center;
 flex-direction: row;
 background: #c8af88;
 border: #475056 solid 4px;}
+h2{margin-bottom: 0}
 h1{display: inline-block;
 position: relative;
 left: 15%}

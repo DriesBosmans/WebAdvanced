@@ -19,4 +19,5 @@ div{display: inline-block;
   padding: 0 10px;
 }
 img{padding: 5px;}
+
 </style>

@@ -80,7 +80,7 @@ color: #cbe0bc
 }
 
 img{width: 400px;
-border-radius: 30px;
+
 }
 .buildings{
   flex-wrap: wrap;

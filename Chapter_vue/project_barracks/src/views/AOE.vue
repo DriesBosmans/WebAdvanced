@@ -124,6 +124,7 @@ export default {
       unitArray: [],
       pop: [0,30],
       popcapped: false,
+      interval: 0
 
 
 
@@ -199,15 +200,30 @@ export default {
       {
         this.popcapped = true
       }
-      let villagers = this.unitArray.filter(x => x === 'villager.webp')
-      villagers.forEach(()=> setInterval(() => {
-        this.resources[0].Wood += 3
-        this.resources[1].Food += 2
-        this.resources[2].Gold += 1
-        this.resources[3].Stone += 0.5
-      }, 2000))
+      if(this.units[0].amount === 1){
+        this.StartProduction()
+      }
+      if(this.units[0].amount===0)
+      {
+        clearInterval(this.interval)
+        this.interval = 0
+      }
+      this.Production()
 
 
+
+    },
+    StartProduction(){
+      // let villagers = this.unitArray.filter(x => x === 'villager.webp')
+      // villagers.forEach(()=>
+           this.interval = setInterval(()=>this.Production(), 2000)
+      console.log(this.interval)
+    },
+    Production(){
+      this.resources[0].Wood += (3*this.units[0].amount)
+      this.resources[1].Food += (2*this.units[0].amount)
+      this.resources[2].Gold += (1*this.units[0].amount)
+      this.resources[3].Stone += (0.5*this.units[0].amount)
     },
 
     DeleteUnit(unit){
@@ -216,17 +232,20 @@ export default {
       {
         this.unitArray.splice(index, 1)
         this.pop[0]--
+
+        if(unit === 'villager.webp')
+        {
+          this.units[0].amount--
+
+        }
+        }
       }
 
 
 
 },
-    StartProduction()
-    {
 
-    }
 
-  },
 
 
 }
