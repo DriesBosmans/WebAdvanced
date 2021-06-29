@@ -20,11 +20,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5c3284ce-2b60-45f2-ba0b-e9cb15dbd63f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Oefeningen deel 3 controlestructuren/Deel 3 controlestructuren.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Oefeningen deel 3 controlestructuren/javascript_deel_drie.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Oef 1.js" beforeDir="false" afterPath="$PROJECT_DIR$/Oef 1.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oef 1 welkom.html" beforeDir="false" afterPath="$PROJECT_DIR$/oef 1 welkom.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oef 4.html" beforeDir="false" afterPath="$PROJECT_DIR$/oef 4.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Oefeningen_examen/Oefeningen3.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Oefeningen_examen/Oefeningen_3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Oefeningen deel 4/oefening3.html" beforeDir="false" afterPath="$PROJECT_DIR$/Oefeningen deel 4/oefening3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Chapter_vue/project_barracks/src/components/Age_of_Empires2/Archer.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../Chapter_vue/project_barracks/src/components/Age_of_Empires2/Archer.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Chapter_vue/project_barracks/src/components/Age_of_Empires2/Longbowman.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../Chapter_vue/project_barracks/src/components/Age_of_Empires2/Longbowman.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Chapter_vue/project_barracks/src/components/Age_of_Empires2/ManAtArms.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../Chapter_vue/project_barracks/src/components/Age_of_Empires2/ManAtArms.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Chapter_vue/project_barracks/src/components/Age_of_Empires2/Spearman.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../Chapter_vue/project_barracks/src/components/Age_of_Empires2/Spearman.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Chapter_vue/project_barracks/src/components/Age_of_Empires2/Trebuchet.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../Chapter_vue/project_barracks/src/components/Age_of_Empires2/Trebuchet.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Chapter_vue/project_barracks/src/components/Age_of_Empires2/Villager.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../Chapter_vue/project_barracks/src/components/Age_of_Empires2/Villager.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Chapter_vue/project_barracks/src/components/Item.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../Chapter_vue/project_barracks/src/components/Album.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Chapter_vue/project_barracks/src/views/AOE.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../Chapter_vue/project_barracks/src/views/AOE.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Chapter_vue/project_barracks/src/views/Albumlist.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../Chapter_vue/project_barracks/src/views/Albumlist.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,6 +74,8 @@
       <option name="presentableId" value="Default" />
       <updated>1615198196613</updated>
       <workItem from="1615198197972" duration="3486000" />
+      <workItem from="1624194174967" duration="3003000" />
+      <workItem from="1624229630038" duration="96000" />
     </task>
     <servers />
   </component>
@@ -82,5 +92,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

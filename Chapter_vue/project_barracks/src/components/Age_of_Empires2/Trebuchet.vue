@@ -20,9 +20,17 @@ export default {
     }
   },
   methods: {
-    BuyUnit(){
-      this.$emit('koopUnit', [this.cost.F, this.cost.W, this.cost.G])
+    BuyUnit(popcapped){
+      if(!this.popcapped) {
+
+        this.$emit('koopUnit', [this.cost.F, this.cost.W, this.cost.G])
+      }
+      else{alert('you are popcapped')}
+      console.log(popcapped)
     }
+  },
+  props:{
+    popcapped: Boolean,
   }
 }
 </script>

@@ -21,7 +21,7 @@ data(){
 },
   methods: {
   BuyUnit(popcapped){
-    if(popcapped) {
+    if(!this.popcapped) {
 
       this.$emit('koopUnit', [this.cost.F, this.cost.W, this.cost.G])
     }

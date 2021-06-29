@@ -15,23 +15,23 @@
             </Villager>
             <ManAtArms
                 v-if="building.title ==='Barracks' && i === activeItem && buildings[1].show === true"
-                       @koopUnit="DoeTransactieUnit($event, resources), VoegUnitToe('Manatarms')">
+                       @koopUnit="DoeTransactieUnit($event, resources), VoegUnitToe('Manatarms')" :popcapped="popcapped">
             </ManAtArms>
             <Spearman
                 v-if="building.title ==='Barracks' && i === activeItem && buildings[1].show === true"
-                      @koopUnit="DoeTransactieUnit($event, resources), VoegUnitToe('Spearman')">
+                      @koopUnit="DoeTransactieUnit($event, resources), VoegUnitToe('Spearman')" :popcapped="popcapped">
             </Spearman>
             <trebuchet
                 v-if="building.title ==='Castle' && i === activeItem && buildings[3].show === true"
-                       @koopUnit="DoeTransactieUnit($event, resources), VoegUnitToe('Trebuchet')">
+                       @koopUnit="DoeTransactieUnit($event, resources), VoegUnitToe('Trebuchet')" :popcapped="popcapped">
             </trebuchet>
             <Archer
                 v-if="building.title ==='Archery range' && i === activeItem && buildings[2].show === true"
-            @koopUnit="DoeTransactieUnit($event, resources), VoegUnitToe('Archer')">
+            @koopUnit="DoeTransactieUnit($event, resources), VoegUnitToe('Archer')" :popcapped="popcapped">
             </Archer>
             <Longbowman
                 v-if="building.title ==='Castle' && i === activeItem && buildings[3].show === true"
-                        @koopUnit="DoeTransactieUnit($event, resources), VoegUnitToe('Longbowman')">
+                        @koopUnit="DoeTransactieUnit($event, resources), VoegUnitToe('Longbowman')" :popcapped="popcapped">
 
             </Longbowman>
           </div>
@@ -125,9 +125,6 @@ export default {
       pop: [0,30],
       popcapped: false,
       interval: 0
-
-
-
     }
   },
 
@@ -200,29 +197,20 @@ export default {
       {
         this.popcapped = true
       }
-      if(this.units[0].amount === 1){
-        this.StartProduction()
+      if(this.pop[0] < this.pop[1]){
+        this.popcapped = false;
       }
-      if(this.units[0].amount===0)
-      {
-        clearInterval(this.interval)
-        this.interval = 0
-      }
-      this.Production()
-
-
 
     },
     StartProduction(){
-      // let villagers = this.unitArray.filter(x => x === 'villager.webp')
-      // villagers.forEach(()=>
+
            this.interval = setInterval(()=>this.Production(), 2000)
       console.log(this.interval)
     },
     Production(){
       this.resources[0].Wood += (3*this.units[0].amount)
       this.resources[1].Food += (2*this.units[0].amount)
-      this.resources[2].Gold += (1*this.units[0].amount)
+      this.resources[2].Gold += (this.units[0].amount)
       this.resources[3].Stone += (0.5*this.units[0].amount)
     },
 
@@ -232,22 +220,24 @@ export default {
       {
         this.unitArray.splice(index, 1)
         this.pop[0]--
-
+        if(this.pop[0]<this.pop[1])
+        {
+          this.popcapped = false;
+        }
+        if(this.pop[0]=== this.pop[1]){
+          this.popcapped = true;
+        }
         if(unit === 'villager.webp')
         {
           this.units[0].amount--
-
         }
         }
       }
 
-
-
 },
-
-
-
-
+  mounted() {
+    this.StartProduction()
+  }
 }
 
 </script>

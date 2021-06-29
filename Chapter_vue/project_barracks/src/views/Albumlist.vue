@@ -9,7 +9,7 @@
 
 import Header from "@/components/Header";
 import Testitem from "@/components/AlbumList";
-import Item from "@/components/Item";
+import Item from "@/components/Album";
 export default {
 name: "Albumlist",
   components: { Testitem, Item
